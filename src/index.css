@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  @apply relative px-2 py-1 transition-colors duration-300;
+}
+
+.nav-link:hover {
+  @apply text-cyan-400;
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 -bottom-1 h-[2px] w-0 bg-cyan-400 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold text-cyan-400 mb-6;
+}
+
+.section-text {
+  @apply text-gray-400 leading-relaxed;
+}
+
+.card {
+  @apply bg-[#071F2B] p-6 rounded-xl shadow-md;
+}
+
+.project-card {
+  @apply bg-[#071F2B] p-6 rounded-xl shadow-md;
+}

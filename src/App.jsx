@@ -1,3 +1,6 @@
+import profilePic from "./assets/madhu1.jpg";
+
+
 function App() {
   const year = new Date().getFullYear();
 
@@ -16,7 +19,7 @@ function App() {
       </nav>
 
       {/* HERO */}
-      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+      <section className="min-h-screen flex flex-col justify-center items-center text-center px-6 -mt-16">
         <h1 className="text-4xl md:text-5xl font-bold text-cyan-400">
           Madhusudhanrao Tirumaladasu
         </h1>
@@ -25,13 +28,36 @@ function App() {
           Turning Ideas into <span className="text-cyan-400">Innovation</span>
         </p>
 
-        <img
-          src="/src/assets/madhu1.jpg"
+        {/* <img
+           src={profilePic} alt="Profile" />
           alt="Profile"
           className="mt-8 w-52 h-52 md:w-64 md:h-64 rounded-full border-4 border-cyan-400
                      object-cover transition-all duration-300
                      hover:scale-110 hover:shadow-[0_0_40px_#22d3ee]"
-        />
+        /> */}
+
+        <img
+  src={profilePic}
+  alt="Profile"
+  className="
+    w-48 h-48 md:w-64 md:h-64
+    rounded-full
+    object-cover
+    border-4 border-cyan-400
+
+    grayscale
+    hover:grayscale-0
+
+    transition-all duration-500 ease-in-out
+    hover:scale-110
+
+    shadow-[0_0_20px_#22d3ee]
+    hover:shadow-[0_0_45px_#22d3ee]
+
+    animate-pulse
+  "
+/>
+
 
         <p className="mt-8 max-w-3xl text-lg md:text-xl text-gray-300 leading-relaxed">
           Detail-oriented <span className="text-cyan-400 font-semibold">Computer Science student</span>
